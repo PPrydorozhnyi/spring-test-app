@@ -13,7 +13,7 @@ public class SetterDemoApp {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Coach coach = context.getBean("cricketCoach", CricketCoach.class);
+        Coach coach = context.getBean("customCoach", Coach.class);
 
         System.out.println(coach.getDailyWorkout());
 

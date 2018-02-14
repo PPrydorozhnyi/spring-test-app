@@ -36,6 +36,16 @@
         <property name="team" value="${foo.team}"/>
     </bean>
 
+    <bean id="randomFortune"
+          class="springdemo.CustomFortuneService"/>
+
+    <bean id="customCoach"
+          class="springdemo.CustomCoach">
+        <constructor-arg ref="randomFortune"/>
+        <property name="email" value="${foo.email}"/>
+        <property name="team" value="${foo.team}"/>
+    </bean>
+
 </beans>
 
 
