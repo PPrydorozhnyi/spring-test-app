@@ -5,9 +5,6 @@ package springdemo;
  *
  * @author P.Pridorozhny
  */
-public interface Coach {
-
-    String getDailyWorkout();
-
-    String getDailyFortune();
+public interface FortuneService {
+    String getFortune();
 }

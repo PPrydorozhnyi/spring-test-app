@@ -1,5 +1,6 @@
 package springdemo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -7,11 +8,23 @@ import org.springframework.stereotype.Component;
  *
  * @author P.Pridorozhny
  */
-@Component("tennisCoach")
+@Component()
 public class TennisCoach implements Coach {
+
+    private FortuneService fortuneService;
+
+    @Autowired
+    public TennisCoach(FortuneService fortuneService) {
+        this.fortuneService = fortuneService;
+    }
 
     @Override
     public String getDailyWorkout() {
         return "tennis trains";
+    }
+
+    @Override
+    public String getDailyFortune() {
+        return fortuneService.getFortune();
     }
 }
