@@ -18,6 +18,8 @@ public class TennisCoach implements Coach {
 //        this.fortuneService = fortuneService;
 //    }
 
+    public TennisCoach() {}
+
     @Override
     public String getDailyWorkout() {
         return "tennis trains";
@@ -26,5 +28,10 @@ public class TennisCoach implements Coach {
     @Override
     public String getDailyFortune() {
         return fortuneService.getFortune();
+    }
+
+    @Autowired
+    public void setFortuneService(FortuneService fortuneService) {
+        this.fortuneService = fortuneService;
     }
 }
