@@ -2,6 +2,7 @@ package springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -18,6 +19,10 @@ public class TennisCoach implements Coach {
 //    @Autowired
 //    @Qualifier("randomService")
     private FortuneService fortuneService;
+    @Value("${foo.email}")
+    private String email;
+    @Value("${foo.team}")
+    private String team;
 
     @Autowired
     public TennisCoach(@Qualifier("randomService") FortuneService theFortuneService) {
@@ -55,4 +60,13 @@ public class TennisCoach implements Coach {
 //    public void setFortuneService(FortuneService fortuneService) {
 //        this.fortuneService = fortuneService;
 //    }
+
+
+    @Override
+    public String toString() {
+        return "TennisCoach{" +
+                "email='" + email + '\'' +
+                ", team='" + team + '\'' +
+                '}';
+    }
 }
