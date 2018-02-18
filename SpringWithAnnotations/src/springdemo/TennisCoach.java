@@ -15,7 +15,8 @@ import javax.annotation.PreDestroy;
  * @author P.Pridorozhny
  */
 @Component()
-@Scope("prototype")
+//For "prototype" scoped beans, Spring does not call the @PreDestroy method. Gasp!
+//@Scope("prototype")
 public class TennisCoach implements Coach {
 
 //    @Autowired
