@@ -1,9 +1,6 @@
 package springdemo;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ComponentScans;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.*;
 
 /**
  * Created by drake on 18/02/18.
@@ -12,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan("springdemo")
+@PropertySource("classpath:sport.properties")
 public class SportConfig {
 
     @Bean

@@ -17,6 +17,7 @@ public class JavaConfigDemo {
         Coach coach = context.getBean("swimmingCoach", Coach.class);
 
         System.out.println(coach.getDailyWorkout());
+        System.out.println(coach);
 
         context.close();
     }
