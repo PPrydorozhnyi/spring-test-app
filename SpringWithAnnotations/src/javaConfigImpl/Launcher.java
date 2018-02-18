@@ -13,6 +13,7 @@ public class Launcher {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(CoachConfig.class);
 
+
         System.out.println(context.getBean("sCoach", Coach.class));
 
         context.close();
