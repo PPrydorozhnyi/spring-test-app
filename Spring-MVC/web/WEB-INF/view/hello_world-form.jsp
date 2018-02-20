@@ -11,7 +11,7 @@
     <title>Input form</title>
 </head>
 
-<form action="processForm" method="get">
+<form action="/hello/processFormV3" method="get">
 
     <input type="text" name="yName"
     placeholder="What is your name?"/>

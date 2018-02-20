@@ -17,6 +17,10 @@ Hello, Spring MVC!
 
 Hello, ${param.yName}!
 
+<br>
+
+Message: ${message}
+
 <hr>
 
 <a href="/"> Main page</a>
