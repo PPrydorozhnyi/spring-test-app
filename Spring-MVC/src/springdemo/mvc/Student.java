@@ -14,6 +14,7 @@ public class Student {
 
     private String country;
     private String favouriteLanguage;
+    private String[] favouriteOS;
 
     private LinkedHashMap<String, String> countryOptions;
 
@@ -64,6 +65,14 @@ public class Student {
 
     public void setFavouriteLanguage(String favouriteLanguage) {
         this.favouriteLanguage = favouriteLanguage;
+    }
+
+    public String[] getFavouriteOS() {
+        return favouriteOS;
+    }
+
+    public void setFavouriteOS(String[] favouriteOS) {
+        this.favouriteOS = favouriteOS;
     }
 
     @Override

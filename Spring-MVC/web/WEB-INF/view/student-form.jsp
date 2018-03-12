@@ -48,6 +48,15 @@
 
     <br>
 
+    What OS do you prefer?
+
+    Windows <form:checkbox path="favouriteOS" value="Windows"/>
+    Linux <form:checkbox path="favouriteOS" value="Linux"/>
+    MacOS <form:checkbox path="favouriteOS" value="MacOS"/>
+    FreeBSD <form:checkbox path="favouriteOS" value="FreeBSD"/>
+
+    <br>
+
     <!call setters>
     <input type="submit" value="Sign up">
 
