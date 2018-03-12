@@ -1,5 +1,7 @@
 package springdemo.mvc;
 
+import java.util.LinkedHashMap;
+
 /**
  * Created by drake on 12/03/18.
  *
@@ -11,8 +13,20 @@ public class Student {
     private String lastName;
 
     private String country;
+    private String favouriteLanguage;
+
+    private LinkedHashMap<String, String> countryOptions;
 
     public Student() {
+
+        // populate country options: used ISO country code
+        countryOptions = new LinkedHashMap<>();
+
+        countryOptions.put("BR", "Brazil");
+        countryOptions.put("FR", "France");
+        countryOptions.put("DE", "Germany");
+        countryOptions.put("IN", "India");
+        countryOptions.put("US", "United States of America");
 
     }
 
@@ -38,6 +52,18 @@ public class Student {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public LinkedHashMap<String, String> getCountryOptions() {
+        return countryOptions;
+    }
+
+    public String getFavouriteLanguage() {
+        return favouriteLanguage;
+    }
+
+    public void setFavouriteLanguage(String favouriteLanguage) {
+        this.favouriteLanguage = favouriteLanguage;
     }
 
     @Override

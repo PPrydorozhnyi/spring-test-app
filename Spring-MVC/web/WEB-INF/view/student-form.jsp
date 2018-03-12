@@ -22,14 +22,30 @@
     <br>
     
     Country:
-    
+
+    <!--
     <form:select path="country">
         <form:option value="Ukraine" label="Ukraine"/>
         <form:option value="Canada" label="Canada"/>
         <form:option value="UK" label="UK"/>
         <form:option value="Germany" label="Germany"/>
     </form:select>
+    -->
+
+
+    <form:select path="country">
+        <form:options items="${student.countryOptions}"/>
+    </form:select>
+
+    <br>
+
+    Favourite language:
     
+    Java <form:radiobutton path="favouriteLanguage" value="Java"/>
+    C++ <form:radiobutton path="favouriteLanguage" value="C++"/>
+    C <form:radiobutton path="favouriteLanguage" value="C"/>
+    C# <form:radiobutton path="favouriteLanguage" value="C#"/>
+
     <br>
 
     <!call setters>
