@@ -10,6 +10,8 @@ public class Student {
     private String firstName;
     private String lastName;
 
+    private String country;
+
     public Student() {
 
     }
@@ -30,11 +32,20 @@ public class Student {
         this.lastName = lastName;
     }
 
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", country='" + country + '\'' +
                 '}';
     }
 }
